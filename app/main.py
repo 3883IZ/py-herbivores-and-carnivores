@@ -11,14 +11,7 @@ class Animal:
         Animal.alive.append(self)
 
     def __repr__(self) -> str:
-        animals_info = []
-        for animal in Animal.alive:
-            animals_info.append(
-                f"{{Name: {animal.name}, "
-                f"Health: {animal.health}, "
-                f"Hidden: {animal.hidden}}}"
-            )
-        return "[" + ", ".join(animals_info) + "]"
+        return f"{{Name: {self.name}, Health: {self.health}, Hidden: {self.hidden}}}"
 
     def die(self) -> None:
         if self in Animal.alive:
